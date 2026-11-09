@@ -1,6 +1,6 @@
 /* TravelOrganizer project-scoped public shell only. Personal records and Blob
  * files live in IndexedDB and are never placed in these public caches. */
-const VERSION = '2026-11-09-reference-5';
+const VERSION = '2026-11-09-demo-6';
 const PREFIX = 'travelorganizer-pwa-travelmakeNew-';
 const SHELL_CACHE = `${PREFIX}shell-${VERSION}`;
 const IMAGE_CACHE = `${PREFIX}images-${VERSION}`;
@@ -8,7 +8,7 @@ const ROOT = new URL('./', self.location.href);
 const INDEX = new URL('index.html', ROOT).href;
 const SHELL = [
   './', 'index.html', 'styles.css', 'app.js', 'manifest.webmanifest', 'favicon.svg',
-  'js/controller.js', 'js/shared.js', 'js/views.js', 'js/forms.js', 'js/gestures.js', 'js/domain.js', 'js/storage.js', 'js/pwa.js', 'js/reference-data.js',
+  'js/controller.js', 'js/shared.js', 'js/views.js', 'js/forms.js', 'js/gestures.js', 'js/domain.js', 'js/storage.js', 'js/pwa.js', 'js/reference-data.js', 'js/demo-data.js',
   'assets/fonts/golos-text.woff2', 'assets/fonts/lora.ttf',
   'assets/icons/icon-192.png', 'assets/icons/icon-512.png',
   'assets/icons/maskable-192.png', 'assets/icons/maskable-512.png',

@@ -1,4 +1,5 @@
-import { annotateTripMoney, createDemoData, ITEM_STATES } from './domain.js';
+import { annotateTripMoney, ITEM_STATES } from './domain.js';
+import { createEnhancedDemoData } from './demo-data.js';
 
 export const LEGACY_KEY = 'travelorganizer.multitool.v1';
 export const DATABASE_NAME = 'travelorganizer.pwa.v2';
@@ -251,7 +252,7 @@ export async function openStore({ demo = false } = {}) {
       catch (e) { db.close(); throw e; }
       meta.push({ key: 'legacy-backup', raw: legacyRaw, migratedAt: new Date().toISOString(), sourceKey: LEGACY_KEY });
       meta.push({ key: 'migration', source: LEGACY_KEY, version: 1, tripIds: data.trips.map(t => t.id), counts: data.trips.map(t => ({ id: t.id, items: t.items.length, tasks: t.tasks.length, events: t.events.length, docs: t.docs.length, accounts: t.accounts.length, transactions: t.transactions.length })) });
-    } else data = demo ? createDemoData() : blankData(false);
+    } else data = demo ? createEnhancedDemoData() : blankData(false);
     data.demo = demo; data.revision = 1;
     const filePuts = [];
     if (demo) {
