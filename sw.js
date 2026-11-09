@@ -1,6 +1,6 @@
 /* TravelOrganizer project-scoped public shell only. Personal records and Blob
  * files live in IndexedDB and are never placed in these public caches. */
-const VERSION = '2026-11-09-demo-6';
+const VERSION = '2026-11-09-layout-fix';
 const PREFIX = 'travelorganizer-pwa-travelmakeNew-';
 const SHELL_CACHE = `${PREFIX}shell-${VERSION}`;
 const IMAGE_CACHE = `${PREFIX}images-${VERSION}`;
